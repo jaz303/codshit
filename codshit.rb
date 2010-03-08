@@ -1,8 +1,8 @@
-module LGen
+module Codshit
   
   module Chooseable
     def |(other)
-      LGen::Choice.new(*(self.choices + other.choices))
+      Codshit::Choice.new(*(self.choices + other.choices))
     end
 
     def choices
@@ -81,7 +81,7 @@ module LGen
 end
 
 class String
-  include LGen::Chooseable
+  include Codshit::Chooseable
 
   def to_text
     self
@@ -89,16 +89,16 @@ class String
 end
 
 class Symbol
-  include LGen::Chooseable
+  include Codshit::Chooseable
   
   def to_text
-    LGen::Generator.active_generator[self].to_text
+    Codshit::Generator.active_generator[self].to_text
   end
 end
 
 class Array
   def |(other)
-    ::LGen::Choice.new(*(choices + other.choices))
+    ::Codshit::Choice.new(*(choices + other.choices))
   end
   
   def choices

@@ -14,7 +14,7 @@ Storyteller Example
 
     require 'codshit'
 
-    g = LGen::Generator.new do |g|
+    g = Codshit::Generator.new do |g|
   
       # default non-terminal is main, can be set with "start :whatever"
       main.is :salutation, " ", :name, " let me tell you a story... ", :story
@@ -61,7 +61,7 @@ Applications in the Decision Making Process
 
 You could even use codshit to pick your next pet-project:
 
-    g = LGen::Generator.new do |g|
+    g = Codshit::Generator.new do |g|
 
       main.is "a ", :project_type, " written in ", :implementation_language
 
