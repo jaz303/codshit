@@ -9,6 +9,11 @@ nonsense or go nowhere conversation, specifically conversations where all partie
 
 Codshit is a DSL for generating language based on a bunch of rules. The idea/syntax was inspired by (i.e. stolen from) http://eigenclass.org/hiki/language-generator. I suspect it could be useful for generating masses of semi-sensible test data for social media websites but I found it a lot more entertaining just to generate random insults.
 
+Installation
+------------
+
+    sudo gem install codshit
+
 Storyteller Example
 -------------------
 
