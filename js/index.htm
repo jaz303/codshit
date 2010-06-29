@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Codshit</title>
+    <script src='codshit.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+      var c = new codshit.Language({
+      	start: ":story",
+      	name: ["jason", "chris", "jack"],
+      	todays_outlook: ["pretty nice", "downright shitty"],
+      	story_name: function(def) { return this.stash("story_name", this.eval(":name")); },
+      	story: "hello :story_name how are you doing today? i must say, :story_name, the weather today is :todays_outlook"
+      });
+
+      alert(c.generate());
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
